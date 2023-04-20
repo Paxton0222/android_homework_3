@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">n1116729_ex3</string>
+    <string name="name">姓名:</string>
+    <string name="age">年齡:</string>
+    <string name="interest">興趣:</string>
+    <string name="remind">提醒:</string>
+    <string name="sports">運動</string>
+    <string name="movie">電影</string>
+    <string name="coding">程式</string>
+    <string name="other">其他</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+</resources>
