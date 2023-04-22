@@ -10,7 +10,6 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.MultiAutoCompleteTextView;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -28,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     protected EditText otherText;
     protected RadioButton yes;
     protected RadioButton no;
-    protected RadioGroup remind;
     protected MultiAutoCompleteTextView result;
     protected Vibrator vb;
 
@@ -37,17 +35,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        name = (EditText) findViewById(R.id.editTextTextPersonName);
-        age = (EditText) findViewById(R.id.editTextNumberSigned);
-        sport = (CheckBox) findViewById(R.id.checkBox);
-        movie = (CheckBox) findViewById(R.id.checkBox2);
-        coding = (CheckBox) findViewById(R.id.checkBox3);
-        other = (CheckBox) findViewById(R.id.checkBox5);
-        otherText = (EditText) findViewById(R.id.editTextTextPersonName2);
-        yes = (RadioButton) findViewById(R.id.radioButton6);
-        no = (RadioButton) findViewById(R.id.radioButton8);
-        remind = (RadioGroup) findViewById(R.id.radioGroup);
-        result = (MultiAutoCompleteTextView) findViewById(R.id.multiAutoCompleteTextView2);
+        name = findViewById(R.id.editTextTextPersonName);
+        age = findViewById(R.id.editTextNumberSigned);
+        sport = findViewById(R.id.checkBox);
+        movie = findViewById(R.id.checkBox2);
+        coding = findViewById(R.id.checkBox3);
+        other = findViewById(R.id.checkBox5);
+        otherText = findViewById(R.id.editTextTextPersonName2);
+        yes = findViewById(R.id.radioButton6);
+        no = findViewById(R.id.radioButton8);
+        result = findViewById(R.id.multiAutoCompleteTextView2);
         vb = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
         // 姓名監聽器
@@ -121,13 +118,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        yes.setOnClickListener(view -> {
-            vb.vibrate(5000);
-        });
+        yes.setOnClickListener(view -> vb.vibrate(5000));
 
-        no.setOnClickListener(view -> {
-            vb.cancel();
-        });
+        no.setOnClickListener(view -> vb.cancel());
         
     }
 

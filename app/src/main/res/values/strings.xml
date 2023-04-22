@@ -10,4 +10,7 @@
     <string name="other">其他</string>
     <string name="yes">是</string>
     <string name="no">否</string>
+    <string name="output" />
+    <string name="name_placeholder">輸入姓名</string>
+    <string name="age_placeholder">輸入年齡</string>
 </resources>

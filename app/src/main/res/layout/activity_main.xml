@@ -50,19 +50,26 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="10dp"
         android:ems="10"
+        android:hint="@string/name_placeholder"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/editTextNumberSigned"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
+        android:autofillHints=""
         android:ems="6"
+        android:hint="@string/age_placeholder"
         android:inputType="numberSigned"
+        android:minHeight="48dp"
         app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <CheckBox
         android:id="@+id/checkBox"
@@ -110,7 +117,8 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/checkBox5"
         app:layout_constraintStart_toEndOf="@+id/checkBox5"
-        app:layout_constraintTop_toTopOf="@+id/checkBox5" />
+        app:layout_constraintTop_toTopOf="@+id/checkBox5"
+        android:autofillHints="" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -145,9 +153,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:autoText="false"
         android:background="@android:color/transparent"
-        android:editable="false"
+        android:hint="@string/output"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
